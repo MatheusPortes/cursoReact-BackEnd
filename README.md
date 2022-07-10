@@ -57,6 +57,15 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+## TypeORM
+
+```bash
+# Criando uma nova migração
+$ typeorm migration:create ./path/Address.migration
+
+# Executando e revertendo migrações
+$ typeorm migration:run
+```
 
 ## Support
 

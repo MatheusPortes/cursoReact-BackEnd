@@ -1,7 +1,5 @@
-import { ConfigModule } from '@nestjs/config';
-import { DataSource } from 'typeorm';
+import { DataSource } from 'typeorm'
 
-ConfigModule.forRoot()
 export const DataBaseProviders = [
   {
     provide: 'DATA_SOURCE',
@@ -13,13 +11,12 @@ export const DataBaseProviders = [
         username: process.env.USER_DB,
         password: process.env.PASSWORD_DB,
         database: process.env.NAME_DB,
-        entities: [
-            __dirname + '/../**/*.entity{.ts,.js}',
-        ],
-        synchronize: true,
-      });
+        entities: [__dirname + '/../**/*.entity{.ts,.js}'],
+        migrations: [__dirname + '/../**/*.migration{.ts,.js}'],
+        // synchronize: true,
+      })
 
-      return dataSource.initialize();
+      return dataSource.initialize()
     },
   },
-];
+]
