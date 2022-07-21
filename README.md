@@ -62,7 +62,6 @@ $ npm run test:cov
 ```bash
 # Criando uma nova migração
 $ typeorm migration:create ./path/Address.migration
-$ npx run typeorm migration:create ./path/Address.migration
 
 # Executando e revertendo migrações
 $ npm run typeorm migration:run -- -d ./src/modules/data-base/data-source.ts
