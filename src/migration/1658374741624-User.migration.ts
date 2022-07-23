@@ -25,6 +25,16 @@ export class Usermigration1658374741624 implements MigrationInterface {
                     length: '255',
                 },
                 {
+                    name: 'login',
+                    type: 'varchar',
+                    length: '255',
+                },
+                {
+                    name: 'password',
+                    type: 'varchar',
+                    length: '255',
+                },
+                {
                     name: 'email',
                     type: 'varchar',
                     length: '255',
@@ -48,14 +58,14 @@ export class Usermigration1658374741624 implements MigrationInterface {
                     columnNames: ['id_person'],
                     referencedColumnNames: ['id'],
                     referencedTableName: 'person',
-                    onDelete: "CASCADE",
+                    onDelete: "NO ACTION",
                     onUpdate: "CASCADE"
                 },
                 {
                     columnNames: ['id_address'],
                     referencedColumnNames: ['id'],
                     referencedTableName: 'address',
-                    onDelete: "CASCADE",
+                    onDelete: "NO ACTION",
                     onUpdate: "CASCADE"
                 },
             ]
