@@ -51,7 +51,7 @@ export class Citymigration1658276443721 implements MigrationInterface {
                     columnNames: ['id_state'],
                     referencedColumnNames: ['id'],
                     referencedTableName: 'state',
-                    onDelete: "CASCADE",
+                    onDelete: "NO ACTION",
                     onUpdate: "CASCADE"
                 }
             ]
