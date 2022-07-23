@@ -42,7 +42,7 @@ export class State_migration1658120623958 implements MigrationInterface {
                     columnNames: ['id_country'],
                     referencedColumnNames: ['id'],
                     referencedTableName: 'country',
-                    onDelete: "CASCADE",
+                    onDelete: "NO ACTION",
                     onUpdate: "CASCADE"
                 }
             ]
