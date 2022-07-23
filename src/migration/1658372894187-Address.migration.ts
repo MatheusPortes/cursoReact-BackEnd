@@ -53,7 +53,7 @@ export class Addressmigration1658372894187 implements MigrationInterface {
                     columnNames: ['id_city'],
                     referencedColumnNames: ['id'],
                     referencedTableName: 'city',
-                    onDelete: "CASCADE",
+                    onDelete: "NO ACTION",
                     onUpdate: "CASCADE"
                 }
             ]
