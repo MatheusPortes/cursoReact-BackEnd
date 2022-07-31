@@ -67,7 +67,7 @@ $ typeorm migration:create ./path/Address.migration
 $ npm run typeorm migration:run -- -d ./src/modules/data-base/data-source.ts
 
 # Criar database no Postgresql
-create database nome_db;
+$ create database nome_db;
 
 # Remover database no Postgresql 
 $ drop database nome_db;
