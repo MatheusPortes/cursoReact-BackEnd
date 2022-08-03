@@ -18,6 +18,7 @@ export class Usermigration1658374741624 implements MigrationInterface {
                 {
                     name: 'id_address',
                     type: 'integer',
+                    isNullable: true,
                 },
                 {
                     name: 'name',
@@ -46,6 +47,7 @@ export class Usermigration1658374741624 implements MigrationInterface {
                 {
                     name: 'update_at',
                     type: 'timestamp',
+                    isNullable: true,
                 },
                 {
                     name: 'created_at',

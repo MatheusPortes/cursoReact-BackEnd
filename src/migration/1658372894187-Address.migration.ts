@@ -46,6 +46,7 @@ export class Addressmigration1658372894187 implements MigrationInterface {
                 {
                     name: 'update_at',
                     type: 'timestamp',
+                    isNullable: true,
                 },
             ],
             foreignKeys: [

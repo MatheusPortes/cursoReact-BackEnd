@@ -63,6 +63,9 @@ $ npm run test:cov
 # Criando uma nova migração
 $ typeorm migration:create ./path/Address.migration
 
+# Criando uma nova entidade
+$ typeorm entity:create ./path/Address.entity
+
 # Executando e revertendo migrações
 $ npm run typeorm migration:run -- -d ./src/modules/data-base/data-source.ts
 

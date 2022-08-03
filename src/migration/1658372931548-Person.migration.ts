@@ -25,10 +25,12 @@ export class Personmigration1658372931548 implements MigrationInterface {
                     name: 'rg',
                     type: 'varchar',
                     length: '10',
+                    isNullable: true,
                 },
                 {
                     name: 'birth_date',
                     type: 'date',
+                    isNullable: true,
                 },
                 {
                     name: 'created_at',
@@ -38,6 +40,7 @@ export class Personmigration1658372931548 implements MigrationInterface {
                 {
                     name: 'update_at',
                     type: 'timestamp',
+                    isNullable: true,
                 },
             ],
         }))

@@ -1,6 +1,6 @@
 import { Injectable, Scope } from "@nestjs/common";
 import { EntitySchema, ObjectType, Repository } from "typeorm";
-import { UnitOfWorkService } from "./unit-of-work.provider"
+import { UnitOfWorkService } from "./unit-of-work.service"
 
 
 @Injectable({ scope: Scope.REQUEST })
