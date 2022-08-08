@@ -7,7 +7,7 @@ export class Person {
   id: number
 
   @Column({ type: 'varchar', length: 255 })
-  name: number
+  name: string
 
   @Column({ type: 'varchar', length: 11 })
   cpf: string

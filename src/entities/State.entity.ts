@@ -8,7 +8,7 @@ export class State {
   id: number
 
   @Column({ type: 'integer' })
-  id_country: string
+  id_country: string | null
 
   @Column({ type: 'varchar', length: 60 })
   name: string
