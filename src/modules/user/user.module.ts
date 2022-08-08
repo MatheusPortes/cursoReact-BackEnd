@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import { UnitOfWorkModule } from '../unit-of-work/unit-of-work.module';
+import { PersonModule } from '../person/person.module';
 import { UserController } from './user.controller';
 import { UserProviders } from './user.providers';
 import { UserService } from './user.service';
 
 @Module({
-  imports: [UnitOfWorkModule],
+  imports: [PersonModule],
   controllers: [UserController],
   providers: [UserService, ...UserProviders]
 })

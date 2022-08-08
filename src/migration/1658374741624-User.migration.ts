@@ -29,6 +29,7 @@ export class Usermigration1658374741624 implements MigrationInterface {
                     name: 'login',
                     type: 'varchar',
                     length: '255',
+                    isUnique: true,
                 },
                 {
                     name: 'password',
@@ -39,6 +40,7 @@ export class Usermigration1658374741624 implements MigrationInterface {
                     name: 'email',
                     type: 'varchar',
                     length: '255',
+                    isUnique: true,
                 },
                 {
                     name: 'is_state',

@@ -20,12 +20,14 @@ export class Personmigration1658372931548 implements MigrationInterface {
                     name: 'cpf',
                     type: 'varchar',
                     length: '11',
+                    isUnique: true,
                 },
                 {
                     name: 'rg',
                     type: 'varchar',
                     length: '10',
                     isNullable: true,
+                    isUnique: true,
                 },
                 {
                     name: 'birth_date',
