@@ -4,33 +4,21 @@ import { CreateAddressDTO } from "src/modules/address/DTOs/create-address.dto"
 import { CreatePersonDTO } from "src/modules/person/DTOs/creste.dto"
 
 class UserDTO {
-    @IsNotEmpty({ message: 'Não foi informado o "ID Person".' })
-    @IsInt({ message: 'Valor invalido!' })
-    id_person: number
-
-    @IsOptional()
-    @IsInt({ message: 'Valor invalido!' })
-    id_address: number
-
-    @IsNotEmpty({ message: 'Não foi informado um Nome.' })
-    @IsString({ message: 'Valor invalido!' })
-    name: string
-
     @IsNotEmpty({ message: 'Não foi informado um Login.' })
-    @IsString({ message: 'Valor invalido!' })
+    @IsString({ message: 'Valor invalido para Login!' })
     login: string
 
     @IsNotEmpty({ message: 'Não foi informado um Senha.' })
-    @IsString({ message: 'Valor invalido!' })
+    @IsString({ message: 'Valor invalido para Password!' })
     password: string
 
     @IsNotEmpty({ message: 'E-mail é obrigatório.' })
-    @IsString({ message: 'Valor invalido!' })
+    @IsString({ message: 'Valor invalido para E-mail!' })
     email: string
 }
 
 export class CreateUserDTO {
-    @IsNotEmptyObject()
+    @IsOptional()
     @ValidateNested()
     @Type(() => UserDTO)
     user: UserDTO

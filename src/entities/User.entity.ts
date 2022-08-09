@@ -10,11 +10,8 @@ export class User {
   @Column({ type: 'integer' })
   id_person: number
 
-  @Column({ type: 'integer' })
+  @Column({ type: 'integer', nullable: true })
   id_address: number
-
-  @Column({ type: 'varchar', length: 255 })
-  name: string
 
   @Column({ type: 'varchar', length: 255 })
   login: string
@@ -35,10 +32,10 @@ export class User {
   created_at: Date
 
   @ManyToOne(() => Person, person => person.user)
-  @JoinTable()
+  @JoinTable({ name: "id_person" })
   person: Person[]
 
   @ManyToOne(() => Address, address => address.user)
-  @JoinTable()
+  @JoinTable({ name: "id_address" })
   address: Address[]
 }
