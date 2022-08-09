@@ -40,6 +40,7 @@ export class Usermigration1658374741624 implements MigrationInterface {
                 {
                     name: 'is_state',
                     type: 'boolean',
+                    default: true,
                 },
                 {
                     name: 'update_at',

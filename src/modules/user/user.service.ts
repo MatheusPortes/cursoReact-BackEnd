@@ -15,11 +15,12 @@ export class UserService {
     ) { }
 
     async createUser(@Body() params: CreateUserDTO) {
-        console.log('params',params)
         const { person, user } = params
         const new_person = await this.personService.CreatePerson(person)
-        console.log('id_person',new_person.id)
+
         const data_user = { ...user, id_person: new_person.id }
-        await this.transactionalRepository.getRepository(User).save(data_user)
+
+        const new_user = await this.transactionalRepository.getRepository(User).save(data_user)
+        console.log('new_user',new_user)
     }
 }

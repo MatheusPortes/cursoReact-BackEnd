@@ -13,6 +13,6 @@ export class PersonService {
     ) {}
 
     async CreatePerson(params: CreatePersonDTO) {
-        return await this.personRepository.save(params)
+        return await this.transactionalRepository.getRepository(Person).save(params)
     }
 }

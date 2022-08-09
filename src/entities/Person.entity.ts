@@ -25,5 +25,5 @@ export class Person {
   created_at: Date
 
   @OneToMany(() => User, user => user.person)
-  user: User
+  user: User[]
 }
