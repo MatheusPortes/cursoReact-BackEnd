@@ -34,6 +34,6 @@ export class Address {
   @ManyToOne(() => City, city => city.address)
   city: City[]
 
-  // @OneToMany(() => User, user => user.address)
-  // user: User
+  @OneToMany(() => User, user => user.address)
+  user: User
 }

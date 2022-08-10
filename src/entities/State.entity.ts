@@ -1,4 +1,4 @@
-import { Column, Entity, JoinTable, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm"
+import { Column, Entity, JoinColumn, JoinTable, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm"
 import { City } from "./City.entity"
 import { Country } from "./Country.entity"
 
@@ -23,7 +23,7 @@ export class State {
   created_at: Date
 
   @ManyToOne(() => Country, country => country.state)
-  @JoinTable()
+  @JoinColumn()
   country: Country
 
   @OneToMany(() => City, city => city.state)

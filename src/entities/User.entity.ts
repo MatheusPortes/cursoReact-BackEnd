@@ -1,4 +1,4 @@
-import { Column, Entity, JoinTable, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
+import { Column, Entity, JoinColumn, JoinTable, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
 import { Address } from "./Address.entity"
 import { Person } from "./Person.entity"
 
@@ -10,8 +10,8 @@ export class User {
   @Column({ type: 'integer' })
   id_person: number
 
-  // @Column({ type: 'integer', nullable: true })
-  // id_address: number
+  @Column({ type: 'integer', nullable: true })
+  id_address: number
 
   @Column({ type: 'varchar', length: 255 })
   login: string
@@ -32,10 +32,10 @@ export class User {
   created_at: Date
 
   @ManyToOne(() => Person, person => person.user)
-  @JoinTable({ name: "id_person" })
+  @JoinColumn({ name: "id_person" })
   person: Person
 
-  // @ManyToOne(() => Address, address => address.user)
-  // @JoinTable({ name: "id_address" })
-  // address: Address[]
+  @ManyToOne(() => Address, address => address.user)
+  @JoinColumn({ name: "id_address" })
+  address: Address[]
 }

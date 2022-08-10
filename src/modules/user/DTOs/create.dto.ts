@@ -28,9 +28,9 @@ export class CreateUserDTO {
     @Type(() => CreatePersonDTO)
     person: CreatePersonDTO
 
-    // @IsOptional()
-    // @IsObject({ message: 'Valor invalido!' })
-    // @ValidateNested()
-    // @Type(() => CreateAddressDTO)
-    // address: CreateAddressDTO
+    @IsOptional()
+    @IsObject({ message: 'Valor invalido!' })
+    @ValidateNested()
+    @Type(() => CreateAddressDTO)
+    address: CreateAddressDTO
 }
