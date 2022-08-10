@@ -37,6 +37,7 @@ export class Addressmigration1658372894187 implements MigrationInterface {
                     name: 'complement',
                     type: 'varchar',
                     length: '255',
+                    isNullable: true,
                 },
                 {
                     name: 'created_at',

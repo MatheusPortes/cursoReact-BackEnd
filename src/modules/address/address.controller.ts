@@ -11,7 +11,6 @@ export class AddressController {
   @Post()
   async ts() {
     console.log(`aki`)
-    throw new ForbiddenException();
 
   }
 
