@@ -35,6 +35,11 @@ export class Personmigration1658372931548 implements MigrationInterface {
                     isNullable: true,
                 },
                 {
+                    name: 'is_status',
+                    type: 'boolean',
+                    default: true,
+                },
+                {
                     name: 'created_at',
                     type: 'timestamp',
                     default: 'now()'

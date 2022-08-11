@@ -18,6 +18,9 @@ export class Person {
   @Column({ type: 'date' })
   birth_date: Date
 
+  @Column({ type: 'varchar' })
+  is_status: boolean
+
   @Column({ type: 'timestamp' })
   update_at: Date
 

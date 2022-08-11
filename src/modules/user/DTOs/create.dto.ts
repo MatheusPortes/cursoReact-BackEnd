@@ -3,7 +3,7 @@ import { IsInt, IsNotEmpty, IsNotEmptyObject, IsObject, IsOptional, IsString, Va
 import { CreateAddressDTO } from "src/modules/address/DTOs/create-address.dto"
 import { CreatePersonDTO } from "src/modules/person/DTOs/creste.dto"
 
-class UserDTO {
+export class UserDTO {
     @IsNotEmpty({ message: 'Não foi informado um Login.' })
     @IsString({ message: 'Valor invalido para Login!' })
     login: string
@@ -27,10 +27,4 @@ export class CreateUserDTO {
     @ValidateNested()
     @Type(() => CreatePersonDTO)
     person: CreatePersonDTO
-
-    @IsOptional()
-    @IsObject({ message: 'Valor invalido!' })
-    @ValidateNested()
-    @Type(() => CreateAddressDTO)
-    address: CreateAddressDTO
 }
