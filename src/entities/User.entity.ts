@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, JoinTable, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
 import { Address } from "./Address.entity"
 import { Person } from "./Person.entity"
 
@@ -23,7 +23,7 @@ export class User {
   email: string
 
   @Column({ type: 'varchar' })
-  is_state: boolean
+  is_status: boolean
 
   @Column({ type: 'timestamp', nullable: true })
   update_at: Date

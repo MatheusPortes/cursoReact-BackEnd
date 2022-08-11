@@ -38,7 +38,7 @@ export class Usermigration1658374741624 implements MigrationInterface {
                     isUnique: true,
                 },
                 {
-                    name: 'is_state',
+                    name: 'is_status',
                     type: 'boolean',
                     default: true,
                 },
