@@ -88,7 +88,7 @@ export class UserService {
             )
         }
 
-        await this.transactionalRepository.getRepository(User).save({ ...params, id: id_person })
+        await this.transactionalRepository.getRepository(User).save({ ...params, id_person })
     }
 
     async patchUser(id_user: number, params: PatchUserDTO) {
