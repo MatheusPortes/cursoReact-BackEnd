@@ -66,6 +66,8 @@ export class UserService {
     }
 
     async createUserWithPerson(id_person: number, params: CreateUserWithPersonDTO) {
+        await this.searchUserByID(id_person)
+
         const login = await this.userRepository.findOneBy({
             login: params.login,
         })
