@@ -15,7 +15,6 @@ export class UserController {
 
     @Post(':id')
     async createUserWithPerson(@Param('id') id_person: number, @Body() params: CreateUserWithPersonDTO): Promise<void> {
-        console.log(id_person)
         await this.userService.createUserWithPerson(id_person, params)
     }
 
