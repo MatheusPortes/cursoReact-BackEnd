@@ -11,10 +11,13 @@ export class UserController {
     constructor(
         private userService: UserService,
         private unitOfWork: UnitOfWorkService
-    ) { }
+    ) {}
 
     @Post(':id')
-    async createUserWithPerson(@Param('id') id_person: number, @Body() params: CreateUserWithPersonDTO): Promise<void> {
+    async createUserWithPerson(
+        @Param('id') id_person: number,
+        @Body() params: CreateUserWithPersonDTO
+    ): Promise<void> {
         await this.userService.createUserWithPerson(id_person, params)
     }
 
@@ -34,7 +37,10 @@ export class UserController {
     }
 
     @Patch(':id')
-    async patch(@Param('id') id_user: number, @Body() params: PatchUserDTO): Promise<void> {
+    async patch(
+        @Param('id') id_user: number,
+        @Body() params: PatchUserDTO
+    ): Promise<void> {
         await this.userService.patchUser(id_user, params)
     }
 }
