@@ -32,8 +32,8 @@ export class Address {
   update_at: Date
 
   @ManyToOne(() => City, city => city.address)
-  city: City[]
+  city: City
 
-  @OneToMany(() => User, user => user.address)
+  @ManyToOne(() => User, user => user.address)
   user: User
 }

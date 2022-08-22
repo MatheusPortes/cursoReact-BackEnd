@@ -36,5 +36,5 @@ export class City {
   state: State
 
   @OneToMany(() => Address, address => address.city)
-  address: Address
+  address: Address[]
 }

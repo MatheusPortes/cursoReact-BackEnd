@@ -61,10 +61,10 @@ $ npm run test:cov
 
 ```bash
 # Criando uma nova migração
-$ typeorm migration:create ./migration/Address.migration
+$ npm run typeorm migration:create src/migration/buy_products.migration
 
 # Criando uma nova entidade
-$ typeorm entity:create ./entities/Address.entity
+$ npm run typeorm entity:create src/entities/buy_products.entity
 
 # Executando e revertendo migrações
 $ npm run typeorm migration:run -- -d ./src/modules/data-base/data-source.ts

@@ -14,10 +14,12 @@ export class Productsmigration1660591344866 implements MigrationInterface {
                 {
                     name: 'id_volume_type',
                     type: 'integer',
+                    isNullable: true,
                 },
                 {
-                    name: 'id_user',
+                    name: 'id_contains_product',
                     type: 'integer',
+                    isNullable: true,
                 },
                 {
                     name: 'name',
@@ -27,6 +29,7 @@ export class Productsmigration1660591344866 implements MigrationInterface {
                 {
                     name: 'price',
                     type: 'integer',
+                    isNullable: true,
                 },
                 {
                     name: 'quantity',
@@ -56,9 +59,9 @@ export class Productsmigration1660591344866 implements MigrationInterface {
                     onUpdate: "CASCADE"
                 },
                 {
-                    columnNames: ['id_user'],
+                    columnNames: ['id_contains_product'],
                     referencedColumnNames: ['id'],
-                    referencedTableName: 'user',
+                    referencedTableName: 'products',
                     onDelete: "NO ACTION",
                     onUpdate: "CASCADE"
                 },

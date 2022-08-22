@@ -12,29 +12,17 @@ export class Colormigration1660590491626 implements MigrationInterface {
                     isPrimary: true
                 },
                 {
-                    name: 'id_products',
-                    type: 'integer',
+                    name: 'color',
+                    type: 'varchar',
+                    length: '100',
+                    isNullable: true,
                 },
                 {
-                    name: 'name',
+                    name: 'hex',
                     type: 'varchar',
-                    length: '255',
-                },
-                {
-                    name: 'initials',
-                    type: 'varchar',
-                    length: '10',
+                    length: '9',
                 },
             ],
-            foreignKeys: [
-                {
-                    columnNames: ['id_products'],
-                    referencedColumnNames: ['id'],
-                    referencedTableName: 'products',
-                    onDelete: "NO ACTION",
-                    onUpdate: "CASCADE"
-                },
-            ]
         }))
     }
 

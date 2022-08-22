@@ -1,5 +1,6 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm"
 import { Address } from "./Address.entity"
+import { BuyProducts } from "./BuyProducts.entity"
 import { Person } from "./Person.entity"
 
 @Entity()
@@ -35,7 +36,10 @@ export class User {
   @JoinColumn({ name: "id_person" })
   person: Person
 
-  @ManyToOne(() => Address, address => address.user)
+  @OneToMany(() => Address, address => address.user)
   @JoinColumn({ name: "id_address" })
   address: Address[]
+
+  @OneToMany(() => BuyProducts, buy_products => buy_products.user)
+  buy_products: BuyProducts[]
 }
