@@ -17,27 +17,24 @@ export class Productsmigration1660591344866 implements MigrationInterface {
                     isNullable: true,
                 },
                 {
-                    name: 'id_contains_product',
-                    type: 'integer',
-                    isNullable: true,
-                },
-                {
                     name: 'name',
                     type: 'varchar',
                     length: '255',
                 },
                 {
                     name: 'price',
-                    type: 'integer',
+                    type: 'float8',
                     isNullable: true,
                 },
                 {
                     name: 'quantity',
                     type: 'integer',
+                    isNullable: true,
                 },
                 {
                     name: 'bulk',
                     type: 'integer',
+                    isNullable: true,
                 },
                 {
                     name: 'created_at',
@@ -55,13 +52,6 @@ export class Productsmigration1660591344866 implements MigrationInterface {
                     columnNames: ['id_volume_type'],
                     referencedColumnNames: ['id'],
                     referencedTableName: 'volume_type',
-                    onDelete: "NO ACTION",
-                    onUpdate: "CASCADE"
-                },
-                {
-                    columnNames: ['id_contains_product'],
-                    referencedColumnNames: ['id'],
-                    referencedTableName: 'products',
                     onDelete: "NO ACTION",
                     onUpdate: "CASCADE"
                 },

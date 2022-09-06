@@ -19,6 +19,9 @@ export class BuyProducts {
     @Column({ type: 'integer' })
     id_products: number
 
+    @Column({ type: 'integer' })
+    code_buy: number
+
     @Column({ type: 'timestamp' })
     created_at: Date
 

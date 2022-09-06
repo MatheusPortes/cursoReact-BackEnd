@@ -6,6 +6,7 @@ import { AddressModule } from './modules/address/address.module';
 import { UnitOfWorkModule } from './modules/unit-of-work/unit-of-work.module';
 import { UserModule } from './modules/user/user.module';
 import { PersonModule } from './modules/person/person.module';
+import { ProductModule } from './modules/product/product.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { PersonModule } from './modules/person/person.module';
     AddressModule,
     UserModule,
     PersonModule,
+    ProductModule,
   ],
   controllers: [AppController],
   providers: [AppService],

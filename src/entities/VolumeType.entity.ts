@@ -6,9 +6,6 @@ export class VolumeType {
     @PrimaryGeneratedColumn()
     id: number
 
-    @Column({ type: 'integer' })
-    id_products: number
-
     @Column({ type: 'varchar', length: 255 })
     name: string
 

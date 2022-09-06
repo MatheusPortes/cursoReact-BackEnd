@@ -22,6 +22,10 @@ export class BuyProductsmigration1661027070564 implements MigrationInterface {
                     isPrimary: true
                 },
                 {
+                    name: 'code_buy',
+                    type: 'integer',
+                },
+                {
                     name: 'created_at',
                     type: 'timestamp',
                     default: 'now()'

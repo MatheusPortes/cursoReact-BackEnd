@@ -4,11 +4,9 @@ import {
     JoinColumn,
     ManyToOne,
     OneToMany,
-    OneToOne,
     PrimaryGeneratedColumn,
 } from 'typeorm'
 import { BuyProducts } from './BuyProducts.entity'
-import { Color } from './Color.entity'
 import { ProductsColor } from './ProductsColor.entity'
 import { VolumeType } from './VolumeType.entity'
 
@@ -20,9 +18,6 @@ export class Products {
     @Column({ type: 'integer', nullable: true })
     id_volume_type: number
 
-    @Column({ type: 'integer', nullable: true })
-    id_contains_product: number
-
     @Column({ type: 'varchar', length: 255 })
     name: string
 
@@ -32,7 +27,7 @@ export class Products {
     @Column({ type: 'integer' })
     quantity: number
 
-    @Column({ type: 'integer' })
+    @Column({ type: 'integer', nullable: true })
     bulk: number
 
     @Column({ type: 'timestamp' })
@@ -51,8 +46,4 @@ export class Products {
     @OneToMany(() => ProductsColor, (products_color) => products_color.products)
     @JoinColumn({ name: 'id_color' })
     products_color: ProductsColor[]
-
-    @OneToOne(() => Products, (contains_product) => contains_product.contains_product)
-    @JoinColumn({ name: 'id_color' })
-    contains_product: Products
 }
