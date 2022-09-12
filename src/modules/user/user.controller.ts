@@ -1,4 +1,4 @@
-import { Body, Controller, Param, Patch, Post, Put } from '@nestjs/common'
+import { Body, Controller, Get, Param, Patch, Post, Put } from '@nestjs/common'
 import { UnitOfWorkService } from '../unit-of-work/unit-of-work.service'
 import { CreateUserDTO } from './DTOs/create.dto'
 import { CreateUserWithPersonDTO } from './DTOs/createWithPerson.dto'
@@ -12,6 +12,11 @@ export class UserController {
         private userService: UserService,
         private unitOfWork: UnitOfWorkService
     ) {}
+
+    @Get('product')
+    async searchUserProducts() {
+        return this.userService.searchUserProducts()
+    }
 
     @Post(':id')
     async createUserWithPerson(

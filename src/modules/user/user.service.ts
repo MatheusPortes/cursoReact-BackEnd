@@ -33,6 +33,40 @@ export class UserService {
         return user
     }
 
+    async searchUserProducts(): Promise<User[]> {
+        const user = await this.userRepository.find({
+            select: {
+                id: true,
+                email: true,
+                login: true,
+                is_status: true,
+
+                person: {
+                    id: true,
+                    name: true,
+                    cpf: true,
+                },
+
+                buy_products: {
+                    id_products: true,
+                    products: {
+                        id: true,
+                        name: true,
+                        price: true
+                    }
+                }
+            },
+
+            relations: {
+                person: true,
+                buy_products: {
+                    products: true
+                }
+            },
+        })
+        return user
+    }
+
     async createUser(params: CreateUserDTO) {
         const { person, user } = params
 
